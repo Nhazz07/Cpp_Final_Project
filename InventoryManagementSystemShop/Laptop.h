@@ -5,12 +5,17 @@
 #include <iostream>
 using namespace std;
 
+// Laptop (Subclass), Extends from Product
 class Laptop : public Product{
+
+    // 
     private:
     int id;
     string brand;
     string model;
     string processor;
+    string DOM;
+    string gpu;
     int ram;
     int storage;
 
@@ -18,9 +23,27 @@ class Laptop : public Product{
     Laptop();
 
     Laptop(int id, string name, double price, int quantity, 
-           string brand, string model, string processor, int ram, int storage);
+           string brand, string model, string processor,string DOM, string gpu, int ram, int storage);
     virtual ~Laptop();
 
+      // Getter 
+    string getBrand();
+    string getModel();
+    string getProcessor();
+    string get_Gpu();
+    string get_DOM();
+    int get_Ram();
+    int get_Storage();
+     // Setter
+    void setBrand(string brand);
+    void setModel(string model);
+    void setProcessor(string processor);
+    void set_Gpu(string gpu);
+    void set_DOM(string DOM);
+    void set_Ram(int ram);
+    void set_Storage(int storage);
+    
+    void display() override;
 };
 
 #endif
