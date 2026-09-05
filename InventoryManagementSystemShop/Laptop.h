@@ -8,7 +8,8 @@ using namespace std;
 // Laptop (Subclass), Extends from Product
 class Laptop : public Product{
 
-    // 
+    // Access Modifers
+    
     private:
     int id;
     string brand;
@@ -20,10 +21,13 @@ class Laptop : public Product{
     int storage;
 
     public:
+    // Constructor
+    // Default Constructor
     Laptop();
-
+    // Constructor with parameter
     Laptop(int id, string name, double price, int quantity, 
            string brand, string model, string processor,string DOM, string gpu, int ram, int storage);
+    // Destructor 
     virtual ~Laptop();
 
       // Getter 
