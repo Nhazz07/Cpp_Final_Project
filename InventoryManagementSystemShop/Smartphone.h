@@ -9,7 +9,7 @@ class Smartphone : public Product {
   private:
     string type;
     string color;
-    int storage;
+    int storage;  
 
   public:
     Smartphone();
