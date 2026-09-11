@@ -32,6 +32,7 @@ class Laptop : public Product {
   virtual ~Laptop();
 
   // Getter
+  int getId();
   string getBrand();
   string getModel();
   string getProcessor();
@@ -40,6 +41,7 @@ class Laptop : public Product {
   int get_Ram();
   int get_Storage();
   // Setter
+  void setId(int id);
   void setBrand(string brand);
   void setModel(string model);
   void setProcessor(string processor);
