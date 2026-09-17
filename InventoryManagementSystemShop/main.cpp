@@ -73,6 +73,35 @@ int main(){
                 break;
 
             }
+            case 2 : {
+                int id, quantity, storage;
+                double price;
+                string name, type, color;
+
+                cout << "========== ADD SMARTPHONE ==========" << endl;
+                cout << "Enter Smart phone ID:";
+                cin >> id;
+                cin.ignore();
+                cout << "Enter Smart phone name: ";
+                getline(cin,name);
+                cout << "Enter Smart phone price: ";
+                cin >> price;
+                cin.ignore();
+                cout << "Enter Quantity: ";
+                cin >> quantity;
+                cin.ignore();
+                cout << "Enter Smart phone type:";
+                getline(cin,type);
+                cout << "Enter Smart phone color: ";
+                getline(cin,color);
+                cout << "Enter Smart phone storage: ";
+                cin >> storage;
+
+                Smartphone* smartphone = new Smartphone(id,name,price,quantity,type,color,storage);
+                inventory.addProduct(smartphone);
+
+                cout << "Smart phone added successfully" << endl;
+            }
         }
     }while(choice != 7);
 }
