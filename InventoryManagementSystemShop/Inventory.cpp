@@ -29,6 +29,27 @@ void Inventory::viewAllProduct() {
     }
 }
 
+bool Inventory::isIdAvailable(string type, int id) {
+    for (Product* product : products) {
+
+        if (type == "Laptop" &&
+            dynamic_cast<Laptop*>(product) != nullptr &&
+            product->getId() == id) {
+
+            return false;
+        }
+
+        if (type == "Smartphone" &&
+            dynamic_cast<Smartphone*>(product) != nullptr &&
+            product->getId() == id) {
+
+            return false;
+        }
+    }
+
+    return true;
+}
+
 void Inventory::searchProduct(string type, int id) {
     for (Product* product : products) {
 
