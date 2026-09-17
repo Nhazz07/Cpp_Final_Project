@@ -18,8 +18,8 @@ class Inventory{
 
     void addProduct(Product* product);
     void viewAllProduct();
-    void searchProduct(int id);
-    void updateProduct(int id, double price, int quantity);
-    void deleteProduct(int id);
+    void searchProduct(string type, int id);
+    void updateProduct(string type,int id, double price, int quantity);
+    void deleteProduct(string type,int id);
 };
 #endif
