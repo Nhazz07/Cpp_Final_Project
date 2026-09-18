@@ -84,33 +84,33 @@ int main() {
         string name, type, color;
 
         cout << "========== ADD SMARTPHONE ==========" << endl;
-        cout << "Enter Smart phone ID:";
+        cout << "Enter Smartphone ID:";
         cin >> id;
         if (!inventory.isIdAvailable("Smartphone", id)) {
           cout << "Smartphone ID already exists!" << endl;
           break;
         }
         cin.ignore();
-        cout << "Enter Smart phone name: ";
+        cout << "Enter Smartphone name: ";
         getline(cin, name);
-        cout << "Enter Smart phone price: ";
+        cout << "Enter Smartphone price: ";
         cin >> price;
         cin.ignore();
         cout << "Enter Quantity: ";
         cin >> quantity;
         cin.ignore();
-        cout << "Enter Smart phone type:";
+        cout << "Enter Smartphone type:";
         getline(cin, type);
-        cout << "Enter Smart phone color: ";
+        cout << "Enter Smartphone color: ";
         getline(cin, color);
-        cout << "Enter Smart phone storage: ";
+        cout << "Enter Smartphone storage: ";
         cin >> storage;
 
         Smartphone* smartphone =
             new Smartphone(id, name, price, quantity, type, color, storage);
         inventory.addProduct(smartphone);
 
-        cout << "Smart phone added successfully" << endl;
+        cout << "Smartphone added successfully" << endl;
         break;
       }
 
